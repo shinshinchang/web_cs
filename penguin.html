@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>單頁切換示例</title>
+  <link rel="stylesheet" href="penpen.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- 主畫面 -->
+    <section id="page1" class="page active">
+      <h1>首頁</h1>
+      <p>歡迎來到我的簡報網站。</p>
+      <button onclick="navigateTo('page2')">前往第二頁</button>
+      <button onclick="navigateTo('page-1')">前往負一頁</button>
+    </section>
+
+    <!-- 負一頁 -->
+    <section id="page-1" class="page">
+      <h1>負一頁</h1>
+      <p>這是首頁下方的頁面。</p>
+      <button onclick="navigateTo('page1')">返回首頁</button>
+    </section>
+
+    <!-- 第二頁 -->
+    <section id="page2" class="page">
+      <h1>第二頁</h1>
+      <p>這是首頁右側的頁面。</p>
+      <button onclick="navigateTo('page1')">返回首頁</button>
+      <button onclick="navigateTo('page3')">前往第三頁</button>
+    </section>
+
+    <!-- 第三頁 -->
+    <section id="page3" class="page">
+      <h1>第三頁</h1>
+      <p>這是最終頁面。</p>
+      <button onclick="navigateTo('page2')">返回第二頁</button>
+    </section>
+  </div>
+
+  <script src="penguin.js"></script>
+</body>
+</html>
